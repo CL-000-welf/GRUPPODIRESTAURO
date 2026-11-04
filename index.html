@@ -3,29 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TITOLO E META TAG SEO PRINCIPALI -->
     <title>Gruppo di Restauro | Conservazione e Restauro Beni Culturali</title>
-    <meta name="description" content="Gruppo di restauratori accreditati MiC per la tutela e conservazione del patrimonio storico-artistico (D.Lgs. 42/2004).">
+    <meta name="description" content="Sinergia di restauratori accreditati dal Ministero della Cultura per la tutela, conservazione e valorizzazione del patrimonio storico-artistico (D.Lgs. 42/2004).">
+    <meta name="keywords" content="restauro beni culturali, conservazione monumentale, affreschi, dipinti su tela, materiale lapideo, manufatti lignei, abilitati MiC, D.Lgs 42/2004">
+    <meta name="author" content="Gruppo di Restauro">
+    <link rel="canonical" href="https://www.gruppodirestauro.it/">
 
-    <!-- Google Fonts -->
+    <!-- FAVICON (SVG e PNG) -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- OPEN GRAPH META TAGS (Per anteprima su WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:title" content="Gruppo di Restauro | Conservazione Beni Culturali">
+    <meta property="og:description" content="Sinergia professionale accreditata dal Ministero della Cultura (D.Lgs. 42/2004) per il restauro di beni storici e artistici.">
+    <meta property="og:image" content="https://www.gruppodirestauro.it/favicon.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:url" content="https://www.gruppodirestauro.it/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+
+    <!-- TWITTER CARD META TAGS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gruppo di Restauro | Conservazione Beni Culturali">
+    <meta name="twitter:description" content="Restauratori accreditati MiC (D.Lgs. 42/2004) per il restauro del patrimonio monumentale.">
+    <meta name="twitter:image" content="https://www.gruppodirestauro.it/favicon.png">
+
+    <!-- GOOGLE FONTS: Inter + Plus Jakarta Sans (Ispirati al Forma DJR Light: minimale, geometrico, pulito) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap 5 CSS -->
+    <!-- BOOTSTRAP 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome 6 icons -->
+    <!-- FONT AWESOME 6 ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- STILI PERSONALIZZATI -->
+    <!-- STILI PERSONALIZZATI E DINAMICI -->
     <style>
         :root {
-            /* Palette CROMATICA UFFICIALE (da Manuale d'Uso Marchio) */
-            --color-verde-ossido: #2C5C5B; /* PANTONE 5473 C */
+            /* PALETTE CROMATICA UFFICIALE DAL MANUALE D'USO */
+            --color-verde-ossido: #2C5C5B;   /* PANTONE 5473 C */
             --color-avorio-calcareo: #F0EADE; /* PANTONE 276 C */
             --color-rosso-ocra: #743E42;
             --color-grigio-pietra: #777873;
-            --color-dark: #1F3837;
+            --color-dark: #1C3332;
         }
 
         body {
@@ -35,104 +62,155 @@
             line-height: 1.7;
         }
 
+        /* TIPOGRAFIA IN STILE FORMA DJR LIGHT (Senze grazie, maiuscolo aerato, rigore monumentale) */
         h1, h2, h3, h4, .brand-font {
-            font-family: 'Cinzel', serif;
-            letter-spacing: 1px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* HEADER E NAVBAR */
+        /* ----------------------------------------------------
+           HEADER E NAVBAR DINAMICA CON INVERSIONE COLORI AL SCROLL
+        ---------------------------------------------------- */
         .navbar {
             background-color: var(--color-verde-ossido);
-            padding: 1rem 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 0.6rem 0; /* Altezza fascia standard */
+            transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+            z-index: 1030;
         }
 
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            padding: 0;
+        /* SVG del Logo: ingrandito senza allargare la fascia menù */
+        .brand-logo-icon {
+            height: 75px; 
+            width: auto;
+            max-width: 320px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+            transition: transform 0.3s ease;
         }
 
-        /* Gestione dimensioni dell'SVG vettoriale del Brand */
-  .brand-logo-icon {
-    height: 70px;         /* Aumentato da 48px a 70px */
-    width: auto;
-    max-width: 400px;     /* Aumentato da 280px a 400px */
-}
-
+        /* Colore predefinito delle tracce SVG (Avorio) */
         .brand-logo-icon .st0 {
-            fill: var(--color-avorio-calcareo) !important;
+            fill: var(--color-avorio-calcareo);
+            transition: fill 0.4s ease;
         }
 
-        /* HERO SECTION */
+        .nav-link {
+            color: var(--color-avorio-calcareo) !important;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: color 0.4s ease, opacity 0.2s ease;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        .navbar-toggler {
+            border: none;
+            color: var(--color-avorio-calcareo);
+        }
+
+        /* CLASSE APPLICATA VIA JAVASCRIPT ALLO SCROLL (INVERSIONE CROMATICA) */
+        .navbar.scrolled {
+            background-color: var(--color-avorio-calcareo) !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            padding: 0.4rem 0;
+        }
+
+        .navbar.scrolled .brand-logo-icon .st0 {
+            fill: var(--color-verde-ossido) !important; /* Il logo diventa verde */
+        }
+
+        .navbar.scrolled .nav-link {
+            color: var(--color-verde-ossido) !important; /* I testi diventano verdi */
+        }
+
+        .navbar.scrolled .navbar-toggler {
+            color: var(--color-verde-ossido) !important;
+        }
+
+        /* ----------------------------------------------------
+           SEZIONE HERO
+        ---------------------------------------------------- */
         .hero-section {
             background: linear-gradient(135deg, var(--color-verde-ossido) 0%, #1c3d3c 100%);
             color: var(--color-avorio-calcareo);
-            padding: 100px 0 80px 0;
+            padding: 120px 0 90px 0;
             position: relative;
         }
 
         .hero-title {
-            font-size: 2.8rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 3px;
             margin-bottom: 1.5rem;
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 300;
             opacity: 0.95;
             max-width: 800px;
-            margin: 0 auto 2rem auto;
+            margin: 0 auto 2.5rem auto;
+            letter-spacing: 0.5px;
         }
 
         .badge-mic {
-            background-color: rgba(240, 234, 222, 0.15);
+            background-color: rgba(240, 234, 222, 0.12);
             border: 1px solid var(--color-avorio-calcareo);
             color: var(--color-avorio-calcareo);
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
             display: inline-block;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
-        /* SCHEDE TEAM E SETTORI MIC */
+        /* ----------------------------------------------------
+           CARD TEAM E SCHEDE DI DETTAGLIO
+        ---------------------------------------------------- */
         .card-team {
             background: #ffffff;
             border: none;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(44, 92, 91, 0.08);
+            border-radius: 10px;
+            padding: 2.2rem 1.5rem;
+            box-shadow: 0 10px 30px rgba(44, 92, 91, 0.06);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
-            border-top: 4px solid var(--color-verde-ossido);
+            border-top: 3px solid var(--color-verde-ossido);
         }
 
         .card-team:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(44, 92, 91, 0.15);
+            box-shadow: 0 15px 35px rgba(44, 92, 91, 0.12);
         }
 
         .team-name {
             color: var(--color-verde-ossido);
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.4rem;
         }
 
         .sector-badge {
             background-color: var(--color-avorio-calcareo);
             color: var(--color-verde-ossido);
             font-weight: 600;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 6px;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             display: inline-block;
             margin: 3px;
+            letter-spacing: 0.5px;
         }
 
-        /* SEZIONE DISCIPLINE / SETTORI MIC */
+        /* SETTORI MIC BOXES */
         .sector-box {
             background-color: rgba(44, 92, 91, 0.04);
             border-left: 3px solid var(--color-verde-ossido);
@@ -143,37 +221,26 @@
 
         .sector-title {
             color: var(--color-verde-ossido);
-            font-weight: 700;
-            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
         }
 
         /* FOOTER */
         footer {
             background-color: var(--color-verde-ossido);
             color: var(--color-avorio-calcareo);
-            padding: 50px 0 30px 0;
-        }
-
-        .footer-link {
-            color: var(--color-avorio-calcareo);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
-
-        .footer-link:hover {
-            opacity: 1;
-            color: #fff;
+            padding: 60px 0 30px 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGAZIONE -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <!-- NAVIGAZIONE STICKY CON INVERSIONE COLORI DINAMICA -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
         <div class="container">
-            <a class="navbar-brand" href="http://www.gruppodirestauro.it/">
-                <!-- SVG INTEGRATO CORRETTAMENTE -->
+            <a class="navbar-brand" href="https://www.gruppodirestauro.it/" aria-label="Home Gruppo di Restauro">
+                <!-- SVG INTEGRATO DIRETTAMENTE NEL CODICE -->
                 <svg id="Livello_1" class="brand-logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190.6 841.9">
                     <defs>
                         <style>
@@ -201,15 +268,15 @@
                     </g>
                 </svg>
             </a>
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fs-4"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#chi-siamo">Chi Siamo</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#settori">Settori MiC</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#professionisti">Professionisti</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contatti">Contatti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#chi-siamo">Chi Siamo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#settori">Settori MiC</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#professionisti">Professionisti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
                 </ul>
             </div>
         </div>
@@ -224,7 +291,7 @@
                 Sinergia professionale accreditata dal Ministero della Cultura per la tutela, la conservazione e la valorizzazione delle opere e dei monumenti tutelati.
             </p>
             <div class="mt-4">
-                <a href="#contatti" class="btn btn-outline-light btn-lg px-4 me-2 rounded-pill"><i class="fa-regular fa-envelope me-2"></i>Contattaci</a>
+                <a href="#contatti" class="btn btn-outline-light btn-lg px-4 me-2 rounded-pill style-btn"><i class="fa-regular fa-envelope me-2"></i>Contattaci</a>
                 <a href="#chi-siamo" class="btn btn-light btn-lg px-4 rounded-pill style-btn" style="color: var(--color-verde-ossido); font-weight:600;">Scopri il Gruppo</a>
             </div>
         </div>
@@ -240,7 +307,7 @@
                         Il marchio nasce dalla sinergia professionale di un gruppo di restauratori accreditati dal Ministero della Cultura.
                     </p>
                     <p>
-                        L'unione delle nostre competenze ci consente di coprire in modo organico l'intero spettro d'intervento richiesto dalle <strong>Soprintendenze</strong> sui cantieri di restauro monumentali e sulle opere tutelate dal Codice dei Beni Culturali e del Paesaggio.
+                        L'unione delle nostre competenze ci consente di coprire in modo organico l'intero spettro d'intervento richiesto dalle <strong>Soprintendenze</strong> sui cantieri di restauro monumentali e sulle opere tutelate dal Codice dei Beni Culturali e del Paesaggio (D.Lgs. 42/2004).
                     </p>
                 </div>
                 <div class="col-lg-6">
@@ -274,7 +341,6 @@
                         <div>
                             <span class="sector-badge">Settore 1</span>
                             <span class="sector-badge">Settore 2</span>
-                            <span class="sector-badge">Settore 4</span>
                         </div>
                     </div>
                 </div>
@@ -357,18 +423,18 @@
         </div>
     </section>
 
-    <!-- CONTATTI -->
+    <!-- FOOTER E CONTATTI -->
     <footer id="contatti">
         <div class="container">
             <div class="row g-4 mb-4">
                 <div class="col-md-6">
-                    <h3 class="h4 mb-3">GRUPPO DI RESTAURO</h3>
+                    <h3 class="h4 mb-3" style="color: var(--color-avorio-calcareo);">GRUPPO DI RESTAURO</h3>
                     <p class="small text-white-50">
                         Interventi di conservazione e restauro su opere tutelate e cantieri monumentali.
                     </p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <h4 class="h5 mb-3">Informazioni di Contatto</h4>
+                    <h4 class="h5 mb-3" style="color: var(--color-avorio-calcareo);">Informazioni di Contatto</h4>
                     <p class="mb-1"><i class="fa-solid fa-globe me-2"></i>www.gruppodirestauro.it</p>
                     <p class="mb-0"><i class="fa-solid fa-envelope me-2"></i>info@gruppodirestauro.it</p>
                 </div>
@@ -380,7 +446,23 @@
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
+    <!-- BOOTSTRAP 5 JS BUNDLE -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JAVASCRIPT PERSONALIZZATO PER L'INVERSIONE COLORI ALLO SCROLL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('mainNavbar');
+
+            window.addEventListener('scroll', function() {
+                // Se lo scroll supera i 50px attiva la classe .scrolled per invertire i colori
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
