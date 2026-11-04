@@ -65,12 +65,17 @@
             overflow-x: hidden;
         }
 
-        /* TIPOGRAFIA IN STILE FORMA DJR LIGHT */
+        /* TIPOGRAFIA E GESTIONE DEGLI A CAPO ANTI-ORFANI */
         h1, h2, h3, h4, .brand-font {
             font-family: 'Inter', sans-serif;
             font-weight: 300;
             text-transform: uppercase;
             letter-spacing: 2px;
+            text-wrap: balance; /* Bilancia gli a capo su titoli brevi per desktop e mobile */
+        }
+
+        p, li {
+            text-wrap: pretty; /* Impedisce parole singole e preposizioni staccate a fine riga nei paragrafi */
         }
 
         /* ----------------------------------------------------
@@ -154,14 +159,14 @@
         }
 
         .hero-title {
-    font-size: clamp(1.35rem, 4.5vw, 2.6rem);
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 1.5rem;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: manual;
-}
+            font-size: clamp(1.35rem, 4.5vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            word-break: normal;
+            overflow-wrap: normal;
+            hyphens: manual;
+        }
 
         .hero-subtitle {
             font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -357,14 +362,14 @@
     <!-- HERO SECTION -->
     <section class="hero-section text-center">
         <div class="container">
-            <span class="badge-mic"><i class="fa-solid fa-landmark me-2"></i>Abilitazione MiC — D.Lgs. 42/2004</span>
-            <h1 class="hero-title">Conservazione<br> e Restauro<br> del Patrimonio<br> Storico-Artistico</h1>
+            <span class="badge-mic"><i class="fa-solid fa-landmark me-2"></i>Abilitazione MiC — D.Lgs.&nbsp;42/2004</span>
+            <h1 class="hero-title">Conservazione e&nbsp;Restauro del&nbsp;Patrimonio Storico&#8209;Artistico</h1>
             <p class="hero-subtitle">
-                Dialogo professionale accreditato dal Ministero della Cultura per la tutela, la conservazione e la valorizzazione delle opere e dei monumenti tutelati.
+                Dialogo professionale accreditato dal&nbsp;Ministero della&nbsp;Cultura per&nbsp;la&nbsp;tutela, la&nbsp;conservazione e&nbsp;la&nbsp;valorizzazione delle&nbsp;opere e&nbsp;dei&nbsp;monumenti tutelati.
             </p>
             <div class="hero-buttons">
                 <a href="#contatti" class="btn btn-custom-hero btn-custom-outline rounded-pill"><i class="fa-regular fa-envelope me-2"></i>Contattaci</a>
-                <a href="#chi-siamo" class="btn btn-custom-hero btn-custom-solid rounded-pill">Scopri il Gruppo</a>
+                <a href="#chi-siamo" class="btn btn-custom-hero btn-custom-solid rounded-pill">Scopri il&nbsp;Gruppo</a>
             </div>
         </div>
     </section>
@@ -374,25 +379,25 @@
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="mb-3" style="color: var(--color-verde-ossido);">Un approccio multidisciplinare e accreditato</h2>
+                    <h2 class="mb-3" style="color: var(--color-verde-ossido);">Un&nbsp;approccio multidisciplinare e&nbsp;accreditato</h2>
                     <p class="lead text-muted">
-                        Il Gruppo fiorisce dall'unione d'intenti di restauratori accreditati dal Ministero della Cultura.
+                        Il&nbsp;Gruppo fiorisce dall'unione d'intenti di&nbsp;restauratori accreditati dal&nbsp;Ministero della&nbsp;Cultura.
                     </p>
                     <p>
-                        La nostra intesa professionale consente di coprire in modo armonico ed organico l'intero spettro d'intervento richiesto dalle <strong>Soprintendenze</strong> sui cantieri monumentali e sulle opere tutelate dal Codice dei Beni Culturali e del Paesaggio (D.Lgs. 42/2004).
+                        La&nbsp;nostra intesa professionale consente di&nbsp;coprire in&nbsp;modo armonico ed&nbsp;organico l'intero spettro d'intervento richiesto dalle <strong>Soprintendenze</strong> sui&nbsp;cantieri monumentali e&nbsp;sulle opere tutelate dal&nbsp;Codice dei&nbsp;Beni Culturali e&nbsp;del&nbsp;Paesaggio (D.Lgs.&nbsp;42/2004).
                     </p>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-4 rounded-4 shadow-sm" style="background-color: #fff; border: 1px solid rgba(0,0,0,0.05);">
                         <!-- SIMBOLO CANE CORRENTE IN PICCOLO CON DETTAGLIO VETTORIALE -->
                         <div class="mb-3">
-                        <svg viewBox="120 280 970 210" style="height: 40px; width: auto; display: block; fill: var(--color-verde-ossido);">
-                            <path d="M353.6,329.1c30.8,1,62.1-.2,93.1.2,7.4.5,10.1,3.7,11.3,10.7,2.8,16.6,3.8,34.2,4.9,50.8,0,6.1,0,18.7-1,24.6-8.4,63.5-106.7,98.1-148.9,47.3-27.3-33.4,14.2-82.7,49.7-56.5,10.8,10.2,5.3,29.7-10.5,25.9-9-2.2-10.6-13.1-21.9-8.3-31.1,20.2,22,73.5,65.5,24.2,24.9-31.8,3.8-73.2-32-83.9-37.4-11.1-75.2,7.9-103.2,31.3-37,32.9-77.2,85.2-132.8,73.6-12.3-4.6-9.1-15.2-10-25.4.7-32.2-.9-64.5,0-96.6.3-9.7.1-17.1,11.9-17.9h224Z"/>
-                        </svg>
-                    </div>
-                        <h4 class="h5 mb-3" style="color: var(--color-verde-ossido);">Origine del Simbolo</h4>
+                            <svg viewBox="120 280 970 210" style="height: 40px; width: auto; display: block; fill: var(--color-verde-ossido);">
+                                <path d="M353.6,329.1c30.8,1,62.1-.2,93.1.2,7.4.5,10.1,3.7,11.3,10.7,2.8,16.6,3.8,34.2,4.9,50.8,0,6.1,0,18.7-1,24.6-8.4,63.5-106.7,98.1-148.9,47.3-27.3-33.4,14.2-82.7,49.7-56.5,10.8,10.2,5.3,29.7-10.5,25.9-9-2.2-10.6-13.1-21.9-8.3-31.1,20.2,22,73.5,65.5,24.2,24.9-31.8,3.8-73.2-32-83.9-37.4-11.1-75.2,7.9-103.2,31.3-37,32.9-77.2,85.2-132.8,73.6-12.3-4.6-9.1-15.2-10-25.4.7-32.2-.9-64.5,0-96.6.3-9.7.1-17.1,11.9-17.9h224Z"/>
+                            </svg>
+                        </div>
+                        <h4 class="h5 mb-3" style="color: var(--color-verde-ossido);">Origine del&nbsp;Simbolo</h4>
                         <p class="small text-muted mb-0">
-                            L'elemento identificativo trae origine dalla fascia decorativa del <strong>"cane corrente"</strong> (meandro ad onde feline/marine), motivo classico diffuso nella storia dell'arte che ricorre trasversalmente in tutti i materiali di nostra specializzazione: dalle modanature lapidee agli affreschi e ai manufatti lignei.
+                            L'elemento identificativo trae origine dalla fascia decorativa del <strong>"cane corrente"</strong> (meandro ad&nbsp;onde feline/marine), motivo classico diffuso nella storia dell'arte che ricorre trasversalmente in&nbsp;tutti i&nbsp;materiali di&nbsp;nostra specializzazione: dalle modanature lapidee agli affreschi e&nbsp;ai manufatti lignei.
                         </p>
                     </div>
                 </div>
@@ -404,8 +409,8 @@
     <section id="professionisti" class="py-5" style="background-color: rgba(44, 92, 91, 0.03);">
         <div class="container py-4">
             <div class="text-center mb-5">
-                <h2 style="color: var(--color-verde-ossido);">I Restauratori del Gruppo</h2>
-                <p class="text-muted">Professionisti abilitati ed iscritti negli elenchi ufficiali del Ministero della Cultura</p>
+                <h2 style="color: var(--color-verde-ossido);">I&nbsp;Restauratori del&nbsp;Gruppo</h2>
+                <p class="text-muted">Professionisti abilitati ed&nbsp;iscritti negli elenchi ufficiali del&nbsp;Ministero della&nbsp;Cultura</p>
             </div>
             <div class="row g-4">
                 <!-- Marica Negri -->
@@ -472,30 +477,30 @@
     <!-- SETTORI MIC -->
     <section id="settori" class="py-5">
         <div class="container py-4">
-            <h2 class="text-center mb-5" style="color: var(--color-verde-ossido);">Settori di Competenza MiC</h2>
+            <h2 class="text-center mb-5" style="color: var(--color-verde-ossido);">Settori di&nbsp;Competenza MiC</h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="sector-box">
                         <h4 class="sector-title">Settore 1</h4>
-                        <p class="mb-0">Materiali lapidei, musivi e derivati.</p>
+                        <p class="mb-0">Materiali lapidei, musivi e&nbsp;derivati.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="sector-box">
                         <h4 class="sector-title">Settore 2</h4>
-                        <p class="mb-0">Superfici decorate dell'architettura (affreschi, dipinti murali e stucchi storici).</p>
+                        <p class="mb-0">Superfici decorate dell'architettura (affreschi, dipinti murali e&nbsp;stucchi storici).</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="sector-box">
                         <h4 class="sector-title">Settore 3</h4>
-                        <p class="mb-0">Manufatti dipinti su supporto ligneo e tessile (dipinti su tela e tavola).</p>
+                        <p class="mb-0">Manufatti dipinti su&nbsp;supporto ligneo e&nbsp;tessile (dipinti su&nbsp;tela e&nbsp;tavola).</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="sector-box">
                         <h4 class="sector-title">Settore 4</h4>
-                        <p class="mb-0">Manufatti scolpiti in legno, arredi e strutture lignee.</p>
+                        <p class="mb-0">Manufatti scolpiti in&nbsp;legno, arredi e&nbsp;strutture lignee.</p>
                     </div>
                 </div>
             </div>
@@ -507,20 +512,20 @@
         <div class="container">
             <div class="row g-4 mb-4">
                 <div class="col-md-6">
-                    <h3 class="h4 mb-3" style="color: var(--color-avorio-calcareo);">GRUPPO DI RESTAURO</h3>
+                    <h3 class="h4 mb-3" style="color: var(--color-avorio-calcareo);">GRUPPO DI&nbsp;RESTAURO</h3>
                     <p class="small text-white-50">
-                        Interventi di conservazione e afflato conservativo su opere tutelate e cantieri monumentali.
+                        Interventi di&nbsp;conservazione e&nbsp;afflato conservativo su&nbsp;opere tutelate e&nbsp;cantieri monumentali.
                     </p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <h4 class="h5 mb-3" style="color: var(--color-avorio-calcareo);">Informazioni di Contatto</h4>
+                    <h4 class="h5 mb-3" style="color: var(--color-avorio-calcareo);">Informazioni di&nbsp;Contatto</h4>
                     <p class="mb-1"><i class="fa-solid fa-globe me-2"></i>www.gruppodirestauro.it</p>
                     <p class="mb-0"><i class="fa-solid fa-envelope me-2"></i>info@gruppodirestauro.it</p>
                 </div>
             </div>
             <hr style="border-color: rgba(240, 234, 222, 0.2);">
             <div class="text-center small text-white-50 pt-2">
-                &copy; <span id="copyrightYear">2026</span> Gruppo di Restauro — Tutti i diritti riservati. Abilitazione MiC ex D.Lgs. 42/2004.
+                &copy; <span id="copyrightYear">2026</span> Gruppo di&nbsp;Restauro — Tutti i&nbsp;diritti riservati. Abilitazione MiC ex&nbsp;D.Lgs.&nbsp;42/2004.
             </div>
         </div>
     </footer>
