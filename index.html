@@ -229,7 +229,29 @@
         /* ----------------------------------------------------
            CARD TEAM E SETTORI MIC
         ---------------------------------------------------- */
-     /* ---- CARD PROFESSIONISTI RIDISEGNATE ---- */
+#professionisti {
+    position: relative;
+    background-image: linear-gradient(
+        rgba(28, 51, 50, 0.85), 
+        rgba(28, 51, 50, 0.85)
+    ), url('https://www.gruppodirestauro.it/veneri.jpg'); /* background professionisti */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Effetto parallax elegante allo scroll */
+    color: var(--color-avorio-calcareo) !important;
+}
+
+/* Modifica i titoli dentro la sezione per risaltare sullo sfondo scuro */
+#professionisti h2 {
+    color: var(--color-avorio-calcareo) !important;
+}
+
+#professionisti .text-muted {
+    color: rgba(240, 234, 222, 0.75) !important;
+}
+
+
+        
 .card-team {
     background: #ffffff;
     border: 1px solid rgba(44, 92, 91, 0.12);
