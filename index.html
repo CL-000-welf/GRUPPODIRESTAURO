@@ -151,12 +151,28 @@
         /* ----------------------------------------------------
            HERO SECTION (OTTIMIZZATA PER MOBILE E DESKTOP)
         ---------------------------------------------------- */
-        .hero-section {
+       .hero-section {
+    position: relative;
+    /* Overlay sfumato dal verde ossido al verde scuro con l'immagine di sfondo */
+    background: linear-gradient(
+        135deg, 
+        rgba(44, 92, 91, 0.88) 0%, 
+        rgba(28, 51, 50, 0.92) 100%
+    ), url('https://www.gruppodirestauro.it/cassettoni.jpg'); /* hero background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-avorio-calcareo);
+    padding: 90px 0 80px 0;
+}
+        
+        
+        /* .hero-section {
             background: linear-gradient(135deg, var(--color-verde-ossido) 0%, #1c3d3c 100%);
             color: var(--color-avorio-calcareo);
             padding: 90px 0 80px 0;
             position: relative;
-        }
+        } */
 
         .hero-title {
             font-size: clamp(1.35rem, 4.5vw, 2.6rem);
