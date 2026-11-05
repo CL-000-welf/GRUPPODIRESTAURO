@@ -418,63 +418,63 @@
             }
         }
 
+/* ---- SEZIONE SETTORI MIC (ELEGANTE & ISTITUZIONALE) ---- */
+#settori {
+    background-color: var(--color-avorio-calcareo);
+}
 
-/* ---- SEZIONE SETTORI MIC RIDISEGNATA ---- */
 .sector-card {
     background: #ffffff;
-    border: 1px solid rgba(44, 92, 91, 0.15);
-    border-radius: 12px;
-    padding: 1.8rem 1.5rem;
+    border: 1px solid rgba(44, 92, 91, 0.12);
+    border-radius: 8px;
+    padding: 2rem 1.8rem;
     height: 100%;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(28, 51, 50, 0.04);
+    box-shadow: 0 4px 15px rgba(28, 51, 50, 0.03);
     transition: all 0.3s ease;
-    border-top: 4px solid var(--color-verde-ossido);
+    display: flex;
+    flex-direction: column;
 }
 
 .sector-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(44, 92, 91, 0.1);
-    border-top-color: var(--color-rosso-ocra);
+    border-color: var(--color-verde-ossido);
+    box-shadow: 0 8px 24px rgba(44, 92, 91, 0.08);
 }
 
-/* Numero progressivo monumentale in trasparenza sul fondo della card */
-.sector-card-num {
-    position: absolute;
-    top: -10px;
-    right: 15px;
-    font-family: 'Inter', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: rgba(44, 92, 91, 0.06);
-    line-height: 1;
-    pointer-events: none;
-}
-
-.sector-code {
-    font-size: 0.75rem;
+.sector-tag {
+    display: inline-block;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 1.5px;
-    color: var(--color-rosso-ocra);
+    letter-spacing: 1.2px;
+    color: var(--color-verde-ossido);
     text-transform: uppercase;
-    margin-bottom: 0.3rem;
+    background: rgba(44, 92, 91, 0.06);
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(44, 92, 91, 0.15);
+    margin-bottom: 1rem;
+    align-self: flex-start;
 }
 
 .sector-card-title {
     color: var(--color-verde-ossido);
-    font-size: 1.15rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-    letter-spacing: 1px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.85rem;
+    letter-spacing: 0.5px;
+    line-height: 1.35;
+    padding-left: 12px;
+    border-left: 3px solid var(--color-rosso-ocra);
 }
 
 .sector-desc {
-    font-size: 0.9rem;
-    color: var(--color-dark);
-    line-height: 1.6;
+    font-size: 0.88rem;
+    color: #4a5568;
+    line-height: 1.65;
     margin-bottom: 0;
-}        
+}
+
+        
+
 </style>
 
 <!-- DATI STRUTTURATI SCHEMA.ORG PER SEO BRAND E RESTAURATORI -->
@@ -703,15 +703,15 @@
     </div>
 </section>
 
-  <!-- SETTORI MIC -->
+<!-- SETTORI MIC -->
 <section id="settori" class="py-5">
     <div class="container py-4">
         <div class="text-center mb-5">
-            <span class="badge-mic mb-3" style="background-color: rgba(44, 92, 91, 0.08); color: var(--color-verde-ossido); border-color: rgba(44, 92, 91, 0.2);">
+            <span class="badge-mic mb-3" style="background-color: rgba(44, 92, 91, 0.08); color: var(--color-verde-ossido); border: 1px solid rgba(44, 92, 91, 0.2);">
                 <i class="fa-solid fa-certificate me-2"></i>D.M. 26 maggio 2009, n. 86
             </span>
             <h2 style="color: var(--color-verde-ossido);">Settori di&nbsp;Competenza MiC</h2>
-            <p class="text-muted max-w-700 mx-auto" style="max-width: 750px;">
+            <p class="text-muted mx-auto" style="max-width: 700px; font-size: 0.95rem;">
                 Ambiti d'intervento e&nbsp;specializzazioni tecnico-scientifiche accreditate dal&nbsp;Ministero della&nbsp;Cultura per&nbsp;il&nbsp;restauro dei&nbsp;Beni Culturali tutelati.
             </p>
         </div>
@@ -720,8 +720,7 @@
             <!-- Settore 1 -->
             <div class="col-md-6">
                 <div class="sector-card">
-                    <span class="sector-card-num">01</span>
-                    <div class="sector-code">Profilo di Specializzazione 1</div>
+                    <span class="sector-tag">Profilo di Specializzazione 1</span>
                     <h3 class="sector-card-title">Materiali lapidei, musivi e&nbsp;derivati</h3>
                     <p class="sector-desc">
                         Interventi di&nbsp;conservazione e&nbsp;restauro su&nbsp;sculture, elementi architettonici lapidei, mosaici, stucchi, superfici decorate di&nbsp;pregio storico ed&nbsp;edifici monumentali.
@@ -732,8 +731,7 @@
             <!-- Settore 2 -->
             <div class="col-md-6">
                 <div class="sector-card">
-                    <span class="sector-card-num">02</span>
-                    <div class="sector-code">Profilo di Specializzazione 2</div>
+                    <span class="sector-tag">Profilo di Specializzazione 2</span>
                     <h3 class="sector-card-title">Superfici decorate dell'architettura</h3>
                     <p class="sector-desc">
                         Restauro scientifico di&nbsp;affreschi, dipinti murali in&nbsp;tutte le&nbsp;tecniche (a&nbsp;fresco, a&nbsp;secco, a&nbsp;mezzo fresco), intonaci storici grafiti e&nbsp;decorazioni a&nbsp;stucco.
@@ -744,8 +742,7 @@
             <!-- Settore 3 -->
             <div class="col-md-6">
                 <div class="sector-card">
-                    <span class="sector-card-num">03</span>
-                    <div class="sector-code">Profilo di Specializzazione 3</div>
+                    <span class="sector-tag">Profilo di Specializzazione 3</span>
                     <h3 class="sector-card-title">Manufatti dipinti su&nbsp;supporto ligneo e&nbsp;tessile</h3>
                     <p class="sector-desc">
                         Conservazione di&nbsp;dipinti mobili su&nbsp;tavola e&nbsp;su&nbsp;tela, sculture policrome lignee, apparati decorativi, dorature ed&nbsp;elementi di&nbsp;carpenteria storica.
@@ -756,8 +753,8 @@
             <!-- Settore 4 -->
             <div class="col-md-6">
                 <div class="sector-card">
-                    <span class="sector-card-num">04</span>
-                    <div class="sector-code">Profilo di Specializzazione 4</div>
+                    <span class="sector-card-num" style="display:none;"></span>
+                    <span class="sector-tag">Profilo di Specializzazione 4</span>
                     <h3 class="sector-card-title">Manufatti scolpiti in&nbsp;legno, arredi e&nbsp;strutture lignee</h3>
                     <p class="sector-desc">
                         Interventi specialistici su&nbsp;intagli lignei, arredi sacri e&nbsp;profani, soffitti a&nbsp;cassettoni, cori monumentali, intarsi e&nbsp;strutture portanti d'interesse storico-artistico.
