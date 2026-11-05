@@ -418,26 +418,18 @@
             }
         }
 
-/* ---- SEZIONE SETTORI MIC (ELEGANTE & ISTITUZIONALE) ---- */
-#settori {
-    background-color: var(--color-avorio-calcareo);
-}
-
+/* ---- STILE BASE DELLA CARD SETTORI ---- */
 .sector-card {
     background: #ffffff;
-    border: 1px solid rgba(44, 92, 91, 0.12);
+    border: 1px solid rgba(44, 92, 91, 0.15);
     border-radius: 8px;
     padding: 2rem 1.8rem;
     height: 100%;
     box-shadow: 0 4px 15px rgba(28, 51, 50, 0.03);
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
-}
-
-.sector-card:hover {
-    border-color: var(--color-verde-ossido);
-    box-shadow: 0 8px 24px rgba(44, 92, 91, 0.08);
+    cursor: pointer;
 }
 
 .sector-tag {
@@ -453,6 +445,7 @@
     border: 1px solid rgba(44, 92, 91, 0.15);
     margin-bottom: 1rem;
     align-self: flex-start;
+    transition: all 0.35s ease;
 }
 
 .sector-card-title {
@@ -464,6 +457,7 @@
     line-height: 1.35;
     padding-left: 12px;
     border-left: 3px solid var(--color-rosso-ocra);
+    transition: all 0.35s ease;
 }
 
 .sector-desc {
@@ -471,9 +465,38 @@
     color: #4a5568;
     line-height: 1.65;
     margin-bottom: 0;
+    transition: color 0.35s ease;
 }
 
-        
+/* ---- EFFETTO HOVER & ACTIVE (SFONDO VERDE OSSIDO E TESTI BIANCHI) ---- */
+.sector-card:hover,
+.sector-card:active {
+    background-color: var(--color-verde-ossido);
+    border-color: var(--color-verde-ossido);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(28, 51, 50, 0.18);
+}
+
+/* Cambia colore al Tag (diventa avorio tenue con bordo ocra) */
+.sector-card:hover .sector-tag,
+.sector-card:active .sector-tag {
+    background: rgba(240, 234, 222, 0.15);
+    color: var(--color-avorio-calcareo);
+    border-color: var(--color-rosso-ocra);
+}
+
+/* Cambia colore al Titolo e alla barretta laterale */
+.sector-card:hover .sector-card-title,
+.sector-card:active .sector-card-title {
+    color: var(--color-avorio-calcareo);
+    border-left-color: var(--color-avorio-calcareo);
+}
+
+/* Cambia colore al testo descrittivo */
+.sector-card:hover .sector-desc,
+.sector-card:active .sector-desc {
+    color: rgba(240, 234, 222, 0.88);
+}   
 
 </style>
 
