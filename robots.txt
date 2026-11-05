@@ -1,0 +1,6 @@
+# robots.txt per Gruppo di Restauro
+User-agent: *
+Allow: /
+
+# Percorso completo della sitemap
+Sitemap: https://www.gruppodirestauro.it/sitemap.xml
