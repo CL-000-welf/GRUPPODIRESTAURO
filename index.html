@@ -10,12 +10,11 @@
     <meta name="keywords" content="Gruppo di Restauro, Marica Negri, Isotta Lorenzini, Massimo Sidoli, Marco Sanguanini, restauratori MiC, restauro beni culturali, conservazione monumentale, affreschi, dipinti su tela, materiale lapideo, manufatti lignei, abilitati MiC, D.Lgs 42/2004">
     <meta name="author" content="Gruppo di Restauro">
     <link rel="canonical" href="https://www.gruppodirestauro.it/">
+    <meta name="theme-color" content="#256060">
 
-
-
-
-    
-    <!-- FAVICON (SVG e PNG) -->
+    <!-- FAVICON (Standard Google, Apple & Browser moderni) -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
@@ -53,9 +52,9 @@
     <!-- STILI PERSONALIZZATI -->
     <style>
         :root {
-            /* PALETTE CROMATICA UFFICIALE */
-            --color-verde-ossido: #2C5C5B;   /* PANTONE 5473 C */
-            --color-avorio-calcareo: #F0EADE; /* PANTONE 276 C */
+            /* PALETTE CROMATICA UFFICIALE UNIFORMATA */
+            --color-verde-ossido: #256060;   /* Verde Ossido aggiornato */
+            --color-avorio-calcareo: #F5EDE1; /* Avorio Calcareo aggiornato */
             --color-rosso-ocra: #743E42;
             --color-grigio-pietra: #777873;
             --color-dark: #1C3332;
@@ -75,16 +74,14 @@
             font-weight: 300;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-wrap: balance; /* Bilancia gli a capo su titoli brevi per desktop e mobile */
+            text-wrap: balance;
         }
 
         p, li {
-            text-wrap: pretty; /* Impedisce parole singole e preposizioni staccate a fine riga nei paragrafi */
+            text-wrap: pretty;
         }
 
-        /* ----------------------------------------------------
-           HEADER E NAVBAR DINAMICA CON LOGO PROPORZIONATO
-        ---------------------------------------------------- */
+        /* HEADER E NAVBAR DINAMICA */
         .navbar {
             background-color: var(--color-verde-ossido);
             padding: 0.6rem 0;
@@ -99,7 +96,6 @@
             align-items: center;
         }
 
-        /* LOGO INGRANDITO CHE SPORGE LEGGERMENTE SENZA ALLARGARE IL MENU */
         .brand-logo-icon {
             height: 70px;
             width: auto;
@@ -133,7 +129,6 @@
             padding: 0.25rem 0.5rem;
         }
 
-        /* INVERSIONE CROMATICA ALLO SCROLL */
         .navbar.scrolled {
             background-color: var(--color-avorio-calcareo) !important;
             box-shadow: 0 4px 20px rgba(0,0,0,0.12);
@@ -152,31 +147,20 @@
             color: var(--color-verde-ossido) !important;
         }
 
-        /* ----------------------------------------------------
-           HERO SECTION (OTTIMIZZATA PER MOBILE E DESKTOP)
-        ---------------------------------------------------- */
-       .hero-section {
-    position: relative;
-    /* Overlay sfumato dal verde ossido al verde scuro con l'immagine di sfondo */
-    background: linear-gradient(
-        135deg, 
-        rgba(44, 92, 91, 0.88) 0%, 
-        rgba(28, 51, 50, 0.92) 100%
-    ), url('https://www.gruppodirestauro.it/amore.jpg'); /* hero background */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--color-avorio-calcareo);
-    padding: 90px 0 80px 0;
-}
-        
-        
-        /* .hero-section {
-            background: linear-gradient(135deg, var(--color-verde-ossido) 0%, #1c3d3c 100%);
+        /* HERO SECTION */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(
+                135deg, 
+                rgba(37, 96, 96, 0.88) 0%, 
+                rgba(28, 51, 50, 0.92) 100%
+            ), url('https://www.gruppodirestauro.it/amore.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: var(--color-avorio-calcareo);
             padding: 90px 0 80px 0;
-            position: relative;
-        } */
+        }
 
         .hero-title {
             font-size: clamp(1.35rem, 4.5vw, 2.6rem);
@@ -198,7 +182,7 @@
         }
 
         .badge-mic {
-            background-color: rgba(240, 234, 222, 0.12);
+            background-color: rgba(245, 237, 225, 0.12);
             border: 1px solid var(--color-avorio-calcareo);
             color: var(--color-avorio-calcareo);
             padding: 8px 18px;
@@ -209,7 +193,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* STILE E PADDING GENEROSO PER I BOTTONI HERO */
         .hero-buttons {
             display: flex;
             justify-content: center;
@@ -246,135 +229,112 @@
             transform: translateY(-2px);
         }
 
-        /* ----------------------------------------------------
-           CARD TEAM E SETTORI MIC
-        ---------------------------------------------------- */
-#professionisti {
-    position: relative;
-    background-image: linear-gradient(
-        rgba(28, 51, 50, 0.85), 
-        rgba(28, 51, 50, 0.85)
-    ), url('https://www.gruppodirestauro.it/veneri.jpg'); /* background professionisti */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Effetto parallax elegante allo scroll */
-    color: var(--color-avorio-calcareo) !important;
-}
+        /* CARD TEAM E SETTORI */
+        #professionisti {
+            position: relative;
+            background-image: linear-gradient(
+                rgba(28, 51, 50, 0.85), 
+                rgba(28, 51, 50, 0.85)
+            ), url('https://www.gruppodirestauro.it/veneri.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--color-avorio-calcareo) !important;
+        }
 
-/* Modifica i titoli dentro la sezione per risaltare sullo sfondo scuro */
-#professionisti h2 {
-    color: var(--color-avorio-calcareo) !important;
-}
+        #professionisti h2 {
+            color: var(--color-avorio-calcareo) !important;
+        }
 
-#professionisti .text-muted {
-    color: rgba(240, 234, 222, 0.75) !important;
-}
+        #professionisti .text-muted {
+            color: rgba(245, 237, 225, 0.75) !important;
+        }
 
+        .card-team {
+            background: #ffffff;
+            border: 1px solid rgba(37, 96, 96, 0.12);
+            border-radius: 12px;
+            padding: 2.2rem 1.2rem 1.8rem 1.2rem;
+            box-shadow: 0 8px 24px rgba(28, 51, 50, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-        
-.card-team {
-    background: #ffffff;
-    border: 1px solid rgba(44, 92, 91, 0.12);
-    border-radius: 12px;
-    padding: 2.2rem 1.2rem 1.8rem 1.2rem;
-    box-shadow: 0 8px 24px rgba(28, 51, 50, 0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .card-team:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(37, 96, 96, 0.1);
+        }
 
-.card-team:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(44, 92, 91, 0.1);
-}
+        .avatar-placeholder {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: var(--color-avorio-calcareo);
+            border: 1px solid rgba(37, 96, 96, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-verde-ossido);
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
+        }
 
-/* Filigrana Cane Corrente sfumata sullo sfondo della card 
-.card-team::after {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    right: -20px;
-    width: 110px;
-    height: 110px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='120 280 970 210'%3E%3Cpath fill='%232C5C5B' opacity='0.05' d='M353.6,329.1c30.8,1,62.1-.2,93.1.2,7.4.5,10.1,3.7,11.3,10.7,2.8,16.6,3.8,34.2,4.9,50.8,0,6.1,0,18.7-1,24.6-8.4,63.5-106.7,98.1-148.9,47.3-27.3-33.4,14.2-82.7,49.7-56.5,10.8,10.2,5.3,29.7-10.5,25.9-9-2.2-10.6-13.1-21.9-8.3-31.1,20.2,22,73.5,65.5,24.2,24.9-31.8,3.8-73.2-32-83.9-37.4-11.1-75.2,7.9-103.2,31.3-37,32.9-77.2,85.2-132.8,73.6-12.3-4.6-9.1-15.2-10-25.4.7-32.2-.9-64.5,0-96.6.3-9.7.1-17.1,11.9-17.9h224Z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: contain;
-    pointer-events: none;
-}*/
+        .team-name {
+            color: var(--color-verde-ossido);
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+        }
 
-/* Avatar Elegante in attesa della foto */
-.avatar-placeholder {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background-color: var(--color-avorio-calcareo);
-    border: 1px solid rgba(44, 92, 91, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-verde-ossido);
-    margin-bottom: 1.2rem;
-    font-size: 1.3rem;
-}
+        .team-role {
+            color: var(--color-grigio-pietra);
+            font-size: 0.82rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
 
-.team-name {
-    color: var(--color-verde-ossido);
-    font-size: 1.1rem;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    margin-bottom: 0.25rem;
-    text-transform: uppercase;
-}
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            width: 100%;
+            max-width: 220px;
+            margin-top: auto;
+            position: relative;
+            z-index: 1;
+        }
 
-.team-role {
-    color: var(--color-grigio-pietra);
-    font-size: 0.82rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 1.5rem;
-}
+        .sector-chip {
+            padding: 6px 4px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
 
-/* Griglia fissa 2x2 per i Settori MiC */
-.sectors-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    width: 100%;
-    max-width: 220px;
-    margin-top: auto; /* Allinea la griglia in fondo a tutte le card */
-    position: relative;
-    z-index: 1;
-}
+        .sector-chip.active {
+            background-color: rgba(37, 96, 96, 0.1);
+            color: var(--color-verde-ossido);
+            border: 1px solid rgba(37, 96, 96, 0.3);
+        }
 
-.sector-chip {
-    padding: 6px 4px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 0.5px;
-    transition: all 0.2s ease;
-}
-
-/* Settore attivo */
-.sector-chip.active {
-    background-color: rgba(44, 92, 91, 0.1);
-    color: var(--color-verde-ossido);
-    border: 1px solid rgba(44, 92, 91, 0.3);
-}
-
-/* Settore non attivo (disattivato ma visibile per mantenere la struttura) */
-.sector-chip.inactive {
-    background-color: rgba(0, 0, 0, 0.02);
-    color: rgba(119, 120, 115, 0.35);
-    border: 1px dashed rgba(0, 0, 0, 0.08);
-}
+        .sector-chip.inactive {
+            background-color: rgba(0, 0, 0, 0.02);
+            color: rgba(119, 120, 115, 0.35);
+            border: 1px dashed rgba(0, 0, 0, 0.08);
+        }
 
         .sector-box {
-            background-color: rgba(44, 92, 91, 0.04);
+            background-color: rgba(37, 96, 96, 0.04);
             border-left: 3px solid var(--color-verde-ossido);
             padding: 1.5rem;
             border-radius: 0 8px 8px 0;
@@ -394,14 +354,13 @@
             padding: 60px 0 30px 0;
         }
 
-        /* MEDIA QUERIES MOBILE ADAPTIVE */
         @media (max-width: 767.98px) {
             .hero-section {
-                padding: 45px 0 60px 0; /* Ridotto distacco dall'header */
+                padding: 45px 0 60px 0;
             }
 
             .brand-logo-icon {
-                height: 52px; /* Riduzione proporzionata per schermo mobile */
+                height: 52px;
                 margin-top: -4px;
                 margin-bottom: -4px;
             }
@@ -418,138 +377,131 @@
             }
         }
 
-/* ---- STILE BASE DELLA CARD SETTORI ---- */
-.sector-card {
-    background: #ffffff;
-    border: 1px solid rgba(44, 92, 91, 0.15);
-    border-radius: 8px;
-    padding: 2rem 1.8rem;
-    height: 100%;
-    box-shadow: 0 4px 15px rgba(28, 51, 50, 0.03);
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
+        .sector-card {
+            background: #ffffff;
+            border: 1px solid rgba(37, 96, 96, 0.15);
+            border-radius: 8px;
+            padding: 2rem 1.8rem;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(28, 51, 50, 0.03);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
-.sector-tag {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    color: var(--color-verde-ossido);
-    text-transform: uppercase;
-    background: rgba(44, 92, 91, 0.06);
-    padding: 4px 10px;
-    border-radius: 4px;
-    border: 1px solid rgba(44, 92, 91, 0.15);
-    margin-bottom: 1rem;
-    align-self: flex-start;
-    transition: all 0.35s ease;
-}
+        .sector-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            color: var(--color-verde-ossido);
+            text-transform: uppercase;
+            background: rgba(37, 96, 96, 0.06);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(37, 96, 96, 0.15);
+            margin-bottom: 1rem;
+            align-self: flex-start;
+            transition: all 0.35s ease;
+        }
 
-.sector-card-title {
-    color: var(--color-verde-ossido);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.85rem;
-    letter-spacing: 0.5px;
-    line-height: 1.35;
-    padding-left: 12px;
-    border-left: 3px solid var(--color-verde-ossido);
-    transition: all 0.35s ease;
-}
+        .sector-card-title {
+            color: var(--color-verde-ossido);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.85rem;
+            letter-spacing: 0.5px;
+            line-height: 1.35;
+            padding-left: 12px;
+            border-left: 3px solid var(--color-verde-ossido);
+            transition: all 0.35s ease;
+        }
 
-.sector-desc {
-    font-size: 0.88rem;
-    color: #4a5568;
-    line-height: 1.65;
-    margin-bottom: 0;
-    transition: color 0.35s ease;
-}
+        .sector-desc {
+            font-size: 0.88rem;
+            color: #4a5568;
+            line-height: 1.65;
+            margin-bottom: 0;
+            transition: color 0.35s ease;
+        }
 
-/* ---- EFFETTO HOVER & ACTIVE (SFONDO VERDE OSSIDO E TESTI BIANCHI) ---- */
-.sector-card:hover,
-.sector-card:active {
-    background-color: var(--color-verde-ossido);
-    border-color: var(--color-verde-ossido);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(28, 51, 50, 0.18);
-}
+        .sector-card:hover,
+        .sector-card:active {
+            background-color: var(--color-verde-ossido);
+            border-color: var(--color-verde-ossido);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(28, 51, 50, 0.18);
+        }
 
-/* Cambia colore al Tag (diventa avorio tenue con bordo ocra) */
-.sector-card:hover .sector-tag,
-.sector-card:active .sector-tag {
-    background: rgba(240, 234, 222, 0.15);
-    color: var(--color-avorio-calcareo);
-    border-color: var(--color-avorio-calcareo);
-}
+        .sector-card:hover .sector-tag,
+        .sector-card:active .sector-tag {
+            background: rgba(245, 237, 225, 0.15);
+            color: var(--color-avorio-calcareo);
+            border-color: var(--color-avorio-calcareo);
+        }
 
-/* Cambia colore al Titolo e alla barretta laterale */
-.sector-card:hover .sector-card-title,
-.sector-card:active .sector-card-title {
-    color: var(--color-avorio-calcareo);
-    border-left-color: var(--color-avorio-calcareo);
-}
+        .sector-card:hover .sector-card-title,
+        .sector-card:active .sector-card-title {
+            color: var(--color-avorio-calcareo);
+            border-left-color: var(--color-avorio-calcareo);
+        }
 
-/* Cambia colore al testo descrittivo */
-.sector-card:hover .sector-desc,
-.sector-card:active .sector-desc {
-    color: rgba(240, 234, 222, 0.88);
-}   
+        .sector-card:hover .sector-desc,
+        .sector-card:active .sector-desc {
+            color: rgba(245, 237, 225, 0.88);
+        }   
+    </style>
 
-</style>
-
-<!-- DATI STRUTTURATI SCHEMA.ORG PER SEO BRAND E RESTAURATORI -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Gruppo di Restauro",
-  "url": "https://www.gruppodirestauro.it/",
-  "logo": "https://www.gruppodirestauro.it/og-image.png",
-  "description": "Unione d'intenti tra restauratori accreditati dal Ministero della Cultura per la conservazione e il restauro del patrimonio storico-artistico.",
-  "member": [
+    <!-- DATI STRUTTURATI SCHEMA.ORG PER SEO BRAND E RESTAURATORI -->
+    <script type="application/ld+json">
     {
-      "@type": "Person",
-      "name": "Marica Negri",
-      "jobTitle": "Restauratrice Beni Culturali",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Gruppo di Restauro"
-      }
-    },
-    {
-      "@type": "Person",
-      "name": "Isotta Lorenzini",
-      "jobTitle": "Restauratrice Beni Culturali",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Gruppo di Restauro"
-      }
-    },
-    {
-      "@type": "Person",
-      "name": "Massimo Sidoli",
-      "jobTitle": "Restauratore Beni Culturali",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Gruppo di Restauro"
-      }
-    },
-    {
-      "@type": "Person",
-      "name": "Marco Sanguanini",
-      "jobTitle": "Restauratore Beni Culturali",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Gruppo di Restauro"
-      }
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Gruppo di Restauro",
+      "url": "https://www.gruppodirestauro.it/",
+      "logo": "https://www.gruppodirestauro.it/og-image.png",
+      "description": "Unione d'intenti tra restauratori accreditati dal Ministero della Cultura per la conservazione e il restauro del patrimonio storico-artistico.",
+      "member": [
+        {
+          "@type": "Person",
+          "name": "Marica Negri",
+          "jobTitle": "Restauratrice Beni Culturali",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Gruppo di Restauro"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Isotta Lorenzini",
+          "jobTitle": "Restauratrice Beni Culturali",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Gruppo di Restauro"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Massimo Sidoli",
+          "jobTitle": "Restauratore Beni Culturali",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Gruppo di Restauro"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Marco Sanguanini",
+          "jobTitle": "Restauratore Beni Culturali",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Gruppo di Restauro"
+          }
+        }
+      ]
     }
-  ]
-}
-</script>
-    
+    </script>
 </head>
 <body>
 
@@ -557,11 +509,10 @@
     <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
         <div class="container">
             <a class="navbar-brand" href="https://www.gruppodirestauro.it/" aria-label="Home Gruppo di Restauro">
-                <!-- SVG DEL LOGO CON VIEWBOX PERFETTAMENTE SQUADRATO -->
                 <svg id="Livello_1" class="brand-logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="120 280 970 210">
                     <defs>
                         <style>
-                            .st0 { fill: #e9e1d2; }
+                            .st0 { fill: #F5EDE1; }
                         </style>
                     </defs>
                     <path class="st0" d="M353.6,329.1c30.8,1,62.1-.2,93.1.2,7.4.5,10.1,3.7,11.3,10.7,2.8,16.6,3.8,34.2,4.9,50.8,0,6.1,0,18.7-1,24.6-8.4,63.5-106.7,98.1-148.9,47.3-27.3-33.4,14.2-82.7,49.7-56.5,10.8,10.2,5.3,29.7-10.5,25.9-9-2.2-10.6-13.1-21.9-8.3-31.1,20.2,22,73.5,65.5,24.2,24.9-31.8,3.8-73.2-32-83.9-37.4-11.1-75.2,7.9-103.2,31.3-37,32.9-77.2,85.2-132.8,73.6-12.3-4.6-9.1-15.2-10-25.4.7-32.2-.9-64.5,0-96.6.3-9.7.1-17.1,11.9-17.9h224Z"/>
@@ -629,7 +580,6 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="p-4 rounded-4 shadow-sm" style="background-color: #fff; border: 1px solid rgba(0,0,0,0.05);">
-                        <!-- SIMBOLO CANE CORRENTE IN PICCOLO CON DETTAGLIO VETTORIALE -->
                         <div class="mb-3">
                             <svg viewBox="120 280 970 210" style="height: 40px; width: auto; display: block; fill: var(--color-verde-ossido);">
                                 <path d="M353.6,329.1c30.8,1,62.1-.2,93.1.2,7.4.5,10.1,3.7,11.3,10.7,2.8,16.6,3.8,34.2,4.9,50.8,0,6.1,0,18.7-1,24.6-8.4,63.5-106.7,98.1-148.9,47.3-27.3-33.4,14.2-82.7,49.7-56.5,10.8,10.2,5.3,29.7-10.5,25.9-9-2.2-10.6-13.1-21.9-8.3-31.1,20.2,22,73.5,65.5,24.2,24.9-31.8,3.8-73.2-32-83.9-37.4-11.1-75.2,7.9-103.2,31.3-37,32.9-77.2,85.2-132.8,73.6-12.3-4.6-9.1-15.2-10-25.4.7-32.2-.9-64.5,0-96.6.3-9.7.1-17.1,11.9-17.9h224Z"/>
@@ -646,147 +596,146 @@
     </section>
 
     <!-- TEAM E PROFESSIONISTI -->
-<section id="professionisti" class="py-5" style="background-color: rgba(44, 92, 91, 0.03);">
-    <div class="container py-4">
-        <div class="text-center mb-5">
-            <h2 style="color: var(--color-verde-ossido);">I&nbsp;Restauratori del&nbsp;Gruppo</h2>
-            <p class="text-muted">Professionisti abilitati ed&nbsp;iscritti negli elenchi ufficiali del&nbsp;Ministero della&nbsp;Cultura</p>
-        </div>
-        <div class="row g-4">
-            
-            <!-- Marica Negri (Settori 1, 2, 4) -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card-team text-center">
-                    <div class="avatar-placeholder">
-                        <i class="fa-regular fa-user"></i>
-                    </div>
-                    <h3 class="team-name">Marica Negri</h3>
-                    <p class="team-role">Restauratrice Beni&nbsp;Culturali</p>
-                    <div class="sectors-grid">
-                        <span class="sector-chip active">Settore 1</span>
-                        <span class="sector-chip active">Settore 2</span>
-                        <span class="sector-chip inactive">Settore 3</span>
-                        <span class="sector-chip active">Settore 4</span>
-                    </div>
-                </div>
+    <section id="professionisti" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 style="color: var(--color-verde-ossido);">I&nbsp;Restauratori del&nbsp;Gruppo</h2>
+                <p class="text-muted">Professionisti abilitati ed&nbsp;iscritti negli elenchi ufficiali del&nbsp;Ministero della&nbsp;Cultura</p>
             </div>
-
-            <!-- Isotta Lorenzini (Settore 2) -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card-team text-center">
-                    <div class="avatar-placeholder">
-                        <i class="fa-regular fa-user"></i>
-                    </div>
-                    <h3 class="team-name">Isotta Lorenzini</h3>
-                    <p class="team-role">Restauratrice Beni&nbsp;Culturali</p>
-                    <div class="sectors-grid">
-                        <span class="sector-chip inactive">Settore 1</span>
-                        <span class="sector-chip active">Settore 2</span>
-                        <span class="sector-chip inactive">Settore 3</span>
-                        <span class="sector-chip inactive">Settore 4</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Massimo Sidoli (Settori 1, 2, 4) -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card-team text-center">
-                    <div class="avatar-placeholder">
-                        <i class="fa-regular fa-user"></i>
-                    </div>
-                    <h3 class="team-name">Massimo Sidoli</h3>
-                    <p class="team-role">Restauratore Beni&nbsp;Culturali</p>
-                    <div class="sectors-grid">
-                        <span class="sector-chip active">Settore 1</span>
-                        <span class="sector-chip active">Settore 2</span>
-                        <span class="sector-chip inactive">Settore 3</span>
-                        <span class="sector-chip active">Settore 4</span>
+            <div class="row g-4">
+                
+                <!-- Marica Negri -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-team text-center">
+                        <div class="avatar-placeholder">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <h3 class="team-name">Marica Negri</h3>
+                        <p class="team-role">Restauratrice Beni&nbsp;Culturali</p>
+                        <div class="sectors-grid">
+                            <span class="sector-chip active">Settore 1</span>
+                            <span class="sector-chip active">Settore 2</span>
+                            <span class="sector-chip inactive">Settore 3</span>
+                            <span class="sector-chip active">Settore 4</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Marco Sanguanini (Settori 3, 4) -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card-team text-center">
-                    <div class="avatar-placeholder">
-                        <i class="fa-regular fa-user"></i>
+                <!-- Isotta Lorenzini -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-team text-center">
+                        <div class="avatar-placeholder">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <h3 class="team-name">Isotta Lorenzini</h3>
+                        <p class="team-role">Restauratrice Beni&nbsp;Culturali</p>
+                        <div class="sectors-grid">
+                            <span class="sector-chip inactive">Settore 1</span>
+                            <span class="sector-chip active">Settore 2</span>
+                            <span class="sector-chip inactive">Settore 3</span>
+                            <span class="sector-chip inactive">Settore 4</span>
+                        </div>
                     </div>
-                    <h3 class="team-name">Marco Sanguanini</h3>
-                    <p class="team-role">Restauratore Beni&nbsp;Culturali</p>
-                    <div class="sectors-grid">
-                        <span class="sector-chip inactive">Settore 1</span>
-                        <span class="sector-chip inactive">Settore 2</span>
-                        <span class="sector-chip active">Settore 3</span>
-                        <span class="sector-chip active">Settore 4</span>
+                </div>
+
+                <!-- Massimo Sidoli -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-team text-center">
+                        <div class="avatar-placeholder">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <h3 class="team-name">Massimo Sidoli</h3>
+                        <p class="team-role">Restauratore Beni&nbsp;Culturali</p>
+                        <div class="sectors-grid">
+                            <span class="sector-chip active">Settore 1</span>
+                            <span class="sector-chip active">Settore 2</span>
+                            <span class="sector-chip inactive">Settore 3</span>
+                            <span class="sector-chip active">Settore 4</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </div>
-</section>
-
-<!-- SETTORI MIC -->
-<section id="settori" class="py-5">
-    <div class="container py-4">
-        <div class="text-center mb-5">
-            <span class="badge-mic mb-3" style="background-color: rgba(44, 92, 91, 0.08); color: var(--color-verde-ossido); border: 1px solid rgba(44, 92, 91, 0.2);">
-                <i class="fa-solid fa-certificate me-2"></i>D.M. 26 maggio 2009, n. 86
-            </span>
-            <h2 style="color: var(--color-verde-ossido);">Settori di&nbsp;Competenza MiC</h2>
-            <p class="text-muted mx-auto" style="max-width: 700px; font-size: 0.95rem;">
-                Ambiti d'intervento e&nbsp;specializzazioni tecnico-scientifiche accreditate dal&nbsp;Ministero della&nbsp;Cultura per&nbsp;il&nbsp;restauro dei&nbsp;Beni Culturali tutelati.
-            </p>
-        </div>
-
-        <div class="row g-4">
-            <!-- Settore 1 -->
-            <div class="col-md-6">
-                <div class="sector-card">
-                    <span class="sector-tag">Profilo di Specializzazione Settore 1</span>
-                    <h3 class="sector-card-title">Materiali lapidei, musivi e&nbsp;derivati</h3>
-                    <p class="sector-desc">
-                        Interventi di&nbsp;conservazione e&nbsp;restauro su&nbsp;sculture, elementi architettonici lapidei, mosaici, stucchi, superfici decorate di&nbsp;pregio storico ed&nbsp;edifici monumentali.
-                    </p>
+                <!-- Marco Sanguanini -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-team text-center">
+                        <div class="avatar-placeholder">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <h3 class="team-name">Marco Sanguanini</h3>
+                        <p class="team-role">Restauratore Beni&nbsp;Culturali</p>
+                        <div class="sectors-grid">
+                            <span class="sector-chip inactive">Settore 1</span>
+                            <span class="sector-chip inactive">Settore 2</span>
+                            <span class="sector-chip active">Settore 3</span>
+                            <span class="sector-chip active">Settore 4</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Settore 2 -->
-            <div class="col-md-6">
-                <div class="sector-card">
-                    <span class="sector-tag">Profilo di Specializzazione Settore 2</span>
-                    <h3 class="sector-card-title">Superfici decorate dell'architettura</h3>
-                    <p class="sector-desc">
-                        Restauro scientifico di&nbsp;affreschi, dipinti murali in&nbsp;tutte le&nbsp;tecniche (a&nbsp;fresco, a&nbsp;secco, a&nbsp;mezzo fresco), intonaci storici grafiti e&nbsp;decorazioni a&nbsp;stucco.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Settore 3 -->
-            <div class="col-md-6">
-                <div class="sector-card">
-                    <span class="sector-tag">Profilo di Specializzazione Settore 3</span>
-                    <h3 class="sector-card-title">Manufatti dipinti su&nbsp;supporto ligneo e&nbsp;tessile</h3>
-                    <p class="sector-desc">
-                        Conservazione di&nbsp;dipinti mobili su&nbsp;tavola e&nbsp;su&nbsp;tela, sculture policrome lignee, apparati decorativi, dorature ed&nbsp;elementi di&nbsp;carpenteria storica.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Settore 4 -->
-            <div class="col-md-6">
-                <div class="sector-card">
-                    <span class="sector-card-num" style="display:none;"></span>
-                    <span class="sector-tag">Profilo di Specializzazione Settore 4</span>
-                    <h3 class="sector-card-title">Manufatti scolpiti in&nbsp;legno, arredi e&nbsp;strutture lignee</h3>
-                    <p class="sector-desc">
-                        Interventi specialistici su&nbsp;intagli lignei, arredi sacri e&nbsp;profani, soffitti a&nbsp;cassettoni, cori monumentali, intarsi e&nbsp;strutture portanti d'interesse storico-artistico.
-                    </p>
-                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- SETTORI MIC -->
+    <section id="settori" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge-mic mb-3" style="background-color: rgba(37, 96, 96, 0.08); color: var(--color-verde-ossido); border: 1px solid rgba(37, 96, 96, 0.2);">
+                    <i class="fa-solid fa-certificate me-2"></i>D.M. 26 maggio 2009, n. 86
+                </span>
+                <h2 style="color: var(--color-verde-ossido);">Settori di&nbsp;Competenza MiC</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px; font-size: 0.95rem;">
+                    Ambiti d'intervento e&nbsp;specializzazioni tecnico-scientifiche accreditate dal&nbsp;Ministero della&nbsp;Cultura per&nbsp;il&nbsp;restauro dei&nbsp;Beni Culturali tutelati.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Settore 1 -->
+                <div class="col-md-6">
+                    <div class="sector-card">
+                        <span class="sector-tag">Profilo di Specializzazione Settore 1</span>
+                        <h3 class="sector-card-title">Materiali lapidei, musivi e&nbsp;derivati</h3>
+                        <p class="sector-desc">
+                            Interventi di&nbsp;conservazione e&nbsp;restauro su&nbsp;sculture, elementi architettonici lapidei, mosaici, stucchi, superfici decorate di&nbsp;pregio storico ed&nbsp;edifici monumentali.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Settore 2 -->
+                <div class="col-md-6">
+                    <div class="sector-card">
+                        <span class="sector-tag">Profilo di Specializzazione Settore 2</span>
+                        <h3 class="sector-card-title">Superfici decorate dell'architettura</h3>
+                        <p class="sector-desc">
+                            Restauro scientifico di&nbsp;affreschi, dipinti murali in&nbsp;tutte le&nbsp;tecniche (a&nbsp;fresco, a&nbsp;secco, a&nbsp;mezzo fresco), intonaci storici grafiti e&nbsp;decorazioni a&nbsp;stucco.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Settore 3 -->
+                <div class="col-md-6">
+                    <div class="sector-card">
+                        <span class="sector-tag">Profilo di Specializzazione Settore 3</span>
+                        <h3 class="sector-card-title">Manufatti dipinti su&nbsp;supporto ligneo e&nbsp;tessile</h3>
+                        <p class="sector-desc">
+                            Conservazione di&nbsp;dipinti mobili su&nbsp;tavola e&nbsp;su&nbsp;tela, sculture policrome lignee, apparati decorativi, dorature ed&nbsp;elementi di&nbsp;carpenteria storica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Settore 4 -->
+                <div class="col-md-6">
+                    <div class="sector-card">
+                        <span class="sector-tag">Profilo di Specializzazione Settore 4</span>
+                        <h3 class="sector-card-title">Manufatti scolpiti in&nbsp;legno, arredi e&nbsp;strutture lignee</h3>
+                        <p class="sector-desc">
+                            Interventi specialistici su&nbsp;intagli lignei, arredi sacri e&nbsp;profani, soffitti a&nbsp;cassettoni, cori monumentali, intarsi e&nbsp;strutture portanti d'interesse storico-artistico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER E CONTATTI CON COPYRIGHT DINAMICO -->
     <footer id="contatti">
@@ -804,7 +753,7 @@
                     <p class="mb-0"><i class="fa-solid fa-envelope me-2"></i>info@gruppodirestauro.it</p>
                 </div>
             </div>
-            <hr style="border-color: rgba(240, 234, 222, 0.2);">
+            <hr style="border-color: rgba(245, 237, 225, 0.2);">
             <div class="text-center small text-white-50 pt-2">
                 &copy; <span id="copyrightYear">2026</span> Gruppo di&nbsp;Restauro — Tutti i&nbsp;diritti riservati. Abilitazione MiC ex&nbsp;D.Lgs.&nbsp;42/2004.
             </div>
@@ -814,7 +763,7 @@
     <!-- BOOTSTRAP 5 JS BUNDLE -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JAVASCRIPT PERSONALIZZATO (INVERSIONE COLORI HEADER + SCRIPT COPYRIGHT ANNO DINAMICO) -->
+    <!-- JAVASCRIPT PERSONALIZZATO -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // 1. Script per inversione colori Navbar allo Scroll
@@ -827,7 +776,7 @@
                 }
             });
 
-            // 2. Script per Anno Copyright Dinamico (2026 oppure 2026-20XX nei successivi)
+            // 2. Script per Anno Copyright Dinamico
             const yearSpan = document.getElementById('copyrightYear');
             const startYear = 2026;
             const currentYear = new Date().getFullYear();
